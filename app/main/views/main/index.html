@@ -27,12 +27,12 @@
           item{{ if incomplete != 1 }}s{{ end }} left
         </span>
         <ul class="filters">
-          <:nav href="/">All</:nav>
           <:nav href="/active">Active</:nav>
+          <:nav href="/">All</:nav>
           <:nav href="/completed">Completed</:nav>
         </ul>
         {{ if any_complete? }}
-          <button class="clear-completed" e-click="clear_completed">Clear completed</button>
+          <button class="clear-completed" e-click="clear_completed">Clear completed ({{ complete }})</button>
         {{ end }}
       </footer>
     {{ end }}
@@ -43,4 +43,3 @@
   <li>
     <a class="{{ if active_tab? }}selected{{ end }}" href="{{ attrs.href }}">{{ yield }}</a>
   </li>
-

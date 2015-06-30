@@ -1,6 +1,7 @@
   <li class="{{ if completed }}completed{{ end }} {{ if editing }}editing{{ end }} todo-item">
     <div class="view">
       <input class="toggle" type="checkbox" checked="{{ _completed }}">
+      <span class="info right">{{ created }}</span>
       <label e-dblclick="edit(event)">{{ label }}</label>
       <button class="destroy" e-click="destroy"></button>
     </div>

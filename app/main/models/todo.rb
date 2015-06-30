@@ -1,6 +1,7 @@
 class Todo < Volt::Model
   field :label, String
   field :completed
+  field :created, String
 
   # A local reactive variable to store the editing state
   reactive_accessor :editing
@@ -8,6 +9,10 @@ class Todo < Volt::Model
   def label=(val)
     # Strip the string
     set(:label, val.strip)
+  end
+
+  def created=(val)
+    set(:created, val.strip)
   end
 
   def stop_editing

@@ -4,6 +4,7 @@ module Main
   class NewTodoController < Volt::ModelController
     model :store
     reactive_accessor :new_todo_label
+    reactive_accessor :new_todo_created
 
     # Called when the view loads
     def index
@@ -12,7 +13,7 @@ module Main
 
     def add_todo
       if new_todo_label.present?
-        todos << {label: new_todo_label}
+        todos << { label: new_todo_label, created: "#{Time.now.to_s.split(' ')[0..1].join('; ')}" }
         index # clear the field
       end
     end

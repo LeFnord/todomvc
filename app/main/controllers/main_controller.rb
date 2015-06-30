@@ -7,11 +7,14 @@ module Main
     # Use the route to filter which todos we're showing
     def filtered_todos
       query = store.todos
+
       case params._filter
       when 'completed'
-        query = query.where(completed: true)
+        query = query.where(completed: true).reverse
       when 'active'
-        query = query.where({'$or' => [{completed: false}, {completed: nil}]})
+        query = query.where({'$or' => [{completed: false}, {completed: nil}]}).reverse
+      else
+        query = query.sort_by { |x| x.created }.reverse
       end
 
       query

@@ -143,18 +143,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bson_ext (~> 1.9.0)
-  capybara (~> 2.4.2)
-  chromedriver2-helper (~> 0.0.8)
-  concurrent-ruby-ext (~> 0.8.0)
-  csso-rails (~> 0.3.4)
-  opal-rspec (~> 0.4.2)
-  poltergeist (~> 1.5.0)
+  bson_ext
+  capybara
+  chromedriver2-helper
+  concurrent-ruby-ext
+  csso-rails
+  opal-rspec
+  poltergeist
   rbnacl
   rbnacl-libsodium
-  rspec (~> 3.2.0)
-  selenium-webdriver (~> 2.43.0)
-  thin (~> 1.6.0)
-  uglifier (>= 2.4.0)
-  volt (= 0.9.3)
-  volt-mongo (= 0.1.0)
+  rspec
+  selenium-webdriver
+  thin
+  uglifier
+  volt
+  volt-mongo
+
+BUNDLED WITH
+   1.10.4
